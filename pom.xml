@@ -18,6 +18,13 @@
     </properties>
 
 
+<developers>
+<developer>
+<name>John Doe</name>
+<email>jdoe@example.com</email>
+</developer>
+</developers>
+
     <dependencies>
 
         <dependency>
