@@ -16,7 +16,9 @@ public class OmdbClient {
 	public Optional<DetalhesDoFilme> request(Filme filme) {
 		RestTemplate client = new RestTemplate();
 		String titulo = filme.getNome().replace(" ", "+");
+		
 		String url = String.format("https://omdb-fj22.herokuapp.com/movie?title=%s", titulo);
+		
 		try {
 			DetalhesDoFilme detalhesDoFilme = client.getForObject(url, DetalhesDoFilme.class);
 			return Optional.ofNullable(detalhesDoFilme);
